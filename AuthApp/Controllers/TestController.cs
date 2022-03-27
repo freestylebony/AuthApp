@@ -1,10 +1,12 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AuthApp.Controllers
-{
+{   
+    [Authorize]
     public class TestController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Secret()
         {
             return View();
         }
